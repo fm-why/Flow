@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
         $mail = new PHPMailer();
         $mail->IsSMTP();
-        $mail->Host = "smtp.gmail.com"; // Enter your host here
+        $mail->Host = getenv("HOST"); // Enter your host here
         $mail->SMTPAuth = true;
         $mail->Username = $servermail; // Enter your email here
         $mail->Password = $serverpass; //Enter your password here
