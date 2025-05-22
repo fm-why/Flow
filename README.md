@@ -14,7 +14,7 @@ Flow implements these functionss:
 1. **Clone the repository**
    In your terminal use the commad:
    ```git clone https://github.com/fm-why/Flow.git```
-3. **Create the database**
+2. **Create the database**
    Copy the content of 'db.sql' and run it in your MySql console
    > 📝**Note**
    >
@@ -25,13 +25,22 @@ Flow implements these functionss:
    > If you get the error "ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'data date not null default CURRENT_DATE,
 isAdmin boolean not null default FALSE' at line 5"  replace "CURRENT_DATE" with "(curdate())"
 
-4. **Modify env variable**
+3. **Create the .htaccess file**
+   Inside the new file you created paste these lines:
+   ```SetEnv EMAIL "test@test.com"
+      SetEnv PASSWORD "SECRET"
+      SetEnv PORT "PORT"
+      SetEnv HOST "SMTP_HOST"
+      SetEnv DB_HOST "host"
+      SetEnv DB_USER "user"
+      SetEnv DB_PASS "pass" 
+5. **Modify env variable**
    Open the file ".htaccess" and put your db credentials (DB_HOST, DB_USERNAME and DB_PASSWORD) and your SMTP server credentials (EMAIL, PASSWORD, PORT, HOST).
    > 📝**Note**
    >
    > If you don't put the SMTP credentials only the Forget Password section will not work
 
-5. **Enjoy your website**
+6. **Enjoy your website**
    Read what other users talk about and make new friends along the way
 
 > 📝**Note**
